@@ -24,9 +24,9 @@ namespace b_tehtava_15
             */
 
             // minimi korkeus 2
-            //
+            // ekan rivin pituus on korkeus-2 (jos korkeus syötetään  10, ekan rivin merkkejä 8 joista viimeinen on *
 
-            int korkeus = 2;
+            int korkeus = 2; // tästä miinus 3 on ekan rivin pituus
             string[] rivit;
 
             Console.WriteLine("kuusen korkeus? (minimi 2)");
@@ -39,14 +39,26 @@ namespace b_tehtava_15
 
             rivit = new string[korkeus];
 
+            // nollataan rivit ns.
             for (int i = 0; i < korkeus; i++)
             {
-                for (int x = 0; x < korkeus; x++)
+                rivit[i] = "";
+            }
+
+            for (int i = 0; i < korkeus; i++)
+            {
+                for (int x = korkeus - 3 + i; x > 0; x--)
                 {
-                    rivit[i] = 
+                    rivit[i] += '#';
                 }
+            }
+
+            for (int i = 0; i < korkeus; i++)
+            {
+                Console.WriteLine(rivit[i]);
             }
 
         }
     }
 }
+// kikkelis kokkelis jee jee
