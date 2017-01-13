@@ -22,6 +22,18 @@ namespace b_tehtava_17
                 Luvut taulukossa 2 : 5,15,25,35,45
                 Luvut yhdistetyssä taulukossa : 5,10,15,20,25,30,35,40,45,50
             */
+
+            int[] luvut1 = new int[5] { 10, 20, 30, 40, 50 };
+            int[] luvut2 = new int[5] { 5, 15, 25, 35, 45 };
+
+            int[] yhdistetty = luvut1.Concat(luvut2).ToArray();
+
+            Array.Sort(yhdistetty);
+
+            foreach (int i in yhdistetty)
+            {
+                Console.Write(i + ", ");
+            }
         }
     }
 }
