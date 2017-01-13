@@ -28,7 +28,37 @@ namespace b_tehtava16
                 Hienoa, arvasit luvun 3 kerralla.
             */
 
+            Random rand = new Random();
+            int arvaus = 0, randomi = rand.Next(1, 101), yritykset = 0;
+            bool loop = true;
 
+            while (loop)
+            {
+                yritykset++;
+
+                Console.Write("Arvaa luku > ");
+                if (int.TryParse(Console.ReadLine(), out arvaus))
+                {
+                    if (arvaus == randomi)
+                    {
+                        Console.WriteLine("jee oikein {0}:lla yrityksellä!", yritykset);
+                        loop = false;
+                    }
+                    else if (arvaus < randomi)
+                    {
+                        Console.WriteLine("Luku on suurempi");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Luku on pienempi");
+                    }
+
+                }
+                else
+                {
+                    Console.WriteLine("Not an integer!");
+                }
+            }
         }
     }
 }
