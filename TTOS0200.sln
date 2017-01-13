@@ -39,6 +39,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "b_tehtava_14", "b_tehtava_1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "b_tehtava_15", "b_tehtava_15\b_tehtava_15.csproj", "{DA5ED592-6022-4316-B6B4-CAFA0928554C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "b_tehtava_16", "b_tehtava16\b_tehtava_16.csproj", "{5321A2A5-684E-491A-B505-E9EF1D2484AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "b_tehtava_17", "b_tehtava_17\b_tehtava_17.csproj", "{D4248049-AF4B-409E-844A-169361AFA708}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "b_tehtava_18", "b_tehtava_18\b_tehtava_18.csproj", "{EBF1B830-DB2C-400F-A7C8-1CB663453FC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "b_tehtava_19", "b_tehtava_19\b_tehtava_19.csproj", "{7BD2EE23-633B-4BB1-82BA-A326BBD09DE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "b_tehtava_20", "b_tehtava_20\b_tehtava_20.csproj", "{CAD2033E-5FC7-46AD-97C7-2FE40F68F8E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +127,26 @@ Global
 		{DA5ED592-6022-4316-B6B4-CAFA0928554C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA5ED592-6022-4316-B6B4-CAFA0928554C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA5ED592-6022-4316-B6B4-CAFA0928554C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5321A2A5-684E-491A-B505-E9EF1D2484AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5321A2A5-684E-491A-B505-E9EF1D2484AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5321A2A5-684E-491A-B505-E9EF1D2484AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5321A2A5-684E-491A-B505-E9EF1D2484AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4248049-AF4B-409E-844A-169361AFA708}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4248049-AF4B-409E-844A-169361AFA708}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4248049-AF4B-409E-844A-169361AFA708}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4248049-AF4B-409E-844A-169361AFA708}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBF1B830-DB2C-400F-A7C8-1CB663453FC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBF1B830-DB2C-400F-A7C8-1CB663453FC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBF1B830-DB2C-400F-A7C8-1CB663453FC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBF1B830-DB2C-400F-A7C8-1CB663453FC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BD2EE23-633B-4BB1-82BA-A326BBD09DE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BD2EE23-633B-4BB1-82BA-A326BBD09DE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BD2EE23-633B-4BB1-82BA-A326BBD09DE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BD2EE23-633B-4BB1-82BA-A326BBD09DE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAD2033E-5FC7-46AD-97C7-2FE40F68F8E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAD2033E-5FC7-46AD-97C7-2FE40F68F8E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAD2033E-5FC7-46AD-97C7-2FE40F68F8E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAD2033E-5FC7-46AD-97C7-2FE40F68F8E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
