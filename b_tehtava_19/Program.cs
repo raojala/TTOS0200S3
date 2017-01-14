@@ -19,7 +19,9 @@ namespace b_tehtava_19
                 Päätä itse milloin pelaaja joutuu hirteen.
             */
 
-
+            int arvauksiaJaljella = 0;
+            string arvattavaSana = "Kakkapylly";
+            char arvaus;
 
 
 
