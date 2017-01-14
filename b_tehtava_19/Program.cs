@@ -18,6 +18,11 @@ namespace b_tehtava_19
                 Voit näyttää myös jo arvatut ei käytetyt -kirjaimet.
                 Päätä itse milloin pelaaja joutuu hirteen.
             */
+
+
+
+
+
         }
     }
 }
