@@ -52,7 +52,7 @@ namespace b_tehtava_20
             }
 
         stopProgram: { }
-
+            
         }
     }
 }
