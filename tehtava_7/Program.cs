@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JAMK.IT;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -41,7 +42,19 @@ namespace tehtava_7
                     --- Name: Alpenglow - 04:45
                     --- Name: The Eyes of Sharbat Gula - 06:03
                     --- Name: The Greatest Show on Earth - 24:00    
-    */
+                */
+
+            CD_Levy cd = new CD_Levy();
+
+            cd.Artisti = "Nightwish";
+            cd.LevynNimi = "Angels Fall First";
+            cd.genre = CD_Levy.Genre.Metal;
+            cd.Hinta = 19.99f;
+            cd.Laulut = new string[] { "Elvenpath", "Beauty and the Beast", "The Carpenter",
+                "Astral Romance", "Angels Fall First", "Tutankhamen", "Nymphomaniac Fantasia",
+                "Know Why the Nightingale Sings", "Lappi (Lapland)"};
+
+            Console.WriteLine(cd.ToString());
         }
     }
 }
