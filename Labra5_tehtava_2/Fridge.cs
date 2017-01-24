@@ -10,14 +10,22 @@ namespace Labra5_tehtava_2
     {
         List<RuokaAines> ruokaAines = new List<RuokaAines>();
 
+        public List<RuokaAines> RuokaAines
+        {
+            get
+            {
+                return ruokaAines;
+            }
+        }
+
         public void LisaaAines (RuokaAines aines)
         {
-
+            ruokaAines.Add(aines);
         }
 
         public void PoistaAines (RuokaAines aines)
         {
-
+            ruokaAines.Remove(aines);
         }
     }
 }

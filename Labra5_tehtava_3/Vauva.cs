@@ -4,15 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Labra5_tehtava_2
+namespace JAMK.IT
 {
-    class RuokaAines
+    class Vauva:Ihminen
     {
-        public string Nimi { get; }
-
-        public RuokaAines (string s)
+        public string Vaippa { get; set; }
+        public override string Move()
         {
-            Nimi = s;
+            return "Crawling!";
         }
     }
 }
