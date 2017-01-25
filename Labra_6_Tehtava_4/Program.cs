@@ -26,6 +26,10 @@ namespace Labra_6_Tehtava_4
             Listaa erilaiset vaihtoehdot. Toteuta niistä tekstitiedosto-pohjainen ratkaisu.*/
 
             Joukkue joukkue = new Joukkue();
+
+            joukkue.TallennaPelaajat();
+
+
         }
     }
 }

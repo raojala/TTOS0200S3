@@ -11,6 +11,7 @@ namespace JAMK.IT
         public string Etunimi { get; set; }
         public string Sukunimi { get; set; }
         public int Ika { get; set; }
+        public DateTime Syntymapaiva { get; set; }
         public int Numero { get; set; }
 
     }
