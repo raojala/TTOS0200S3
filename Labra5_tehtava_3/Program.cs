@@ -30,6 +30,37 @@ namespace Labra5_tehtava_3
             Toteuta pääohjelmassa muutamia ihmisiä, aikuisia ja vauvoja. Tulostele olioiden tietoja konsolille.
             */
 
+            Vauva vauva = new Vauva();
+            Aikuinen aikuinen = new Aikuinen();
+
+            vauva.Age = 0;
+            vauva.Name = "poopfactory";
+            vauva.Height = 50f;
+            vauva.Weight = 5f;
+            vauva.Vaippa = "pamppers";
+            vauva.Grow();
+            vauva.Move();
+
+            aikuinen.Name = "jooseppi";
+            aikuinen.Age = 25;
+            aikuinen.Weight = 90f;
+            aikuinen.Height = 178f;
+            aikuinen.Auto = "ooppeli";
+
+            aikuinen.Grow();
+            aikuinen.Move();
+
+            Console.WriteLine(aikuinen.Name);
+            Console.WriteLine(aikuinen.Age);
+            Console.WriteLine(aikuinen.Weight);
+            Console.WriteLine(aikuinen.Height);
+            Console.WriteLine(aikuinen.Auto);
+
+            Console.WriteLine(vauva.Name);
+            Console.WriteLine(vauva.Age);
+            Console.WriteLine(vauva.Weight);
+            Console.WriteLine(vauva.Height);
+            Console.WriteLine(vauva.Vaippa);
 
         }
     }
