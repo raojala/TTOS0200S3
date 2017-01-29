@@ -51,6 +51,18 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="dictionary1.png" />
+    <Content Include="dictionary2.png" />
+    <Content Include="dictionary3.png" />
+    <Content Include="dictionary4.png" />
+    <Content Include="dictionary5.png" />
+    <Content Include="List1.png" />
+    <Content Include="List2.png" />
+    <Content Include="List3.png" />
+    <Content Include="List4.png" />
+    <Content Include="List5.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

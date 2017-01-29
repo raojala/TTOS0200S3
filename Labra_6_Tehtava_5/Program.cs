@@ -11,32 +11,9 @@ namespace Labra_6_Tehtava_5
     {
         static void Main(string[] args)
         {
-            Random rand = new Random();
-            Person temp;
+            UsingList();
+            //UsingDictionary();
 
-            DateTime start = DateTime.Now, end;
-
-            List<Person> persons = new List<Person>();
-
-            for (int i = 0; i < 10000; i++)
-            {
-                temp = new Person(rand);
-                persons.Add(temp);
-            }
-
-            end = DateTime.Now;
-
-            Console.WriteLine("persons added. Time: " + (end - start));
-            Console.WriteLine("Random Person: " + persons[rand.Next(persons.Count)]);
-
-            // find person by random name
-            start = DateTime.Now;
-            for (int i = 0; i < 1000; i++)
-            {
-                FindPerson(persons, rand);
-            }
-            end = DateTime.Now;
-            Console.WriteLine("Time it took to find names: " + (end - start));
 
             /*
                 Bonus+Tehtävä 5
@@ -106,6 +83,72 @@ namespace Labra_6_Tehtava_5
              */
         }
 
+        public static void UsingList ()
+        {
+
+            Random rand = new Random();
+            Person temp;
+
+            DateTime start = DateTime.Now, end;
+
+            List<Person> persons = new List<Person>();
+
+            for (int i = 0; i < 10000; i++)
+            {
+                temp = new Person(rand);
+                persons.Add(temp);
+            }
+
+            end = DateTime.Now;
+
+            Console.WriteLine("persons added. Time: " + (end - start));
+            Console.WriteLine("Random Person: " + persons[rand.Next(persons.Count)]);
+
+            // find person by random name
+            start = DateTime.Now;
+            for (int i = 0; i < 1000; i++)
+            {
+                FindPerson(persons, rand);
+            }
+            end = DateTime.Now;
+            Console.WriteLine("Time it took to find names: " + (end - start));
+        }
+
+        public static void UsingDictionary()
+        {
+
+            Random rand = new Random();
+            Person temp;
+
+            DateTime start = DateTime.Now, end;
+
+            Dictionary<string, Person> persons = new Dictionary<string, Person>();
+
+            for (int i = 0; i < 10000; i++)
+            {
+                temp = new Person(rand);
+
+                if (FindPersonInDictonaryUsingString(persons, temp.Etunimi) == null)
+                {
+                    persons.Add(temp.Etunimi, temp);
+                }
+            }
+
+            end = DateTime.Now;
+
+            Console.WriteLine("persons added. Time: " + (end - start));
+            Console.WriteLine("Random Person: " + persons.ElementAt(rand.Next(persons.Count)));
+
+            // find person by random name
+            start = DateTime.Now;
+            for (int i = 0; i < 1000; i++)
+            {
+                FindPersonInDictonaryUsingRand(persons, rand);
+            }
+            end = DateTime.Now;
+            Console.WriteLine("Time it took to find names: " + (end - start));
+        }
+
         public static void FindPerson (List<Person> p, Random r)
         {
             string s = Name_Generator.FirstName(r);
@@ -116,6 +159,30 @@ namespace Labra_6_Tehtava_5
                     Console.WriteLine("found: " + person.ToString() + " with random name generator");
                 }
             }
+        }
+
+        public static void FindPersonInDictonaryUsingRand(Dictionary<string, Person> p, Random r)
+        {
+            string s = Name_Generator.FirstName(r);
+
+            foreach (KeyValuePair<string,Person> key in p)
+            {
+                if (key.Value.Etunimi == s)
+                {
+                    Console.WriteLine("found: " + key.Value.ToString() + " with random name generator");
+                }
+            }
+        }
+        public static string FindPersonInDictonaryUsingString(Dictionary<string, Person> p, string s)
+        {
+            foreach (KeyValuePair<string, Person> key in p)
+            {
+                if (key.Value.Etunimi == s)
+                {
+                    return key.Value.Etunimi;
+                }
+            }
+            return null;
         }
     }
 }
