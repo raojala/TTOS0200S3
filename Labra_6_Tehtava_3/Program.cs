@@ -34,9 +34,6 @@ namespace Labra_6_Tehtava_3
             {
                 Console.WriteLine(c.CardValue + " of " + c.CardSuite);
             }
-
-
-
         }
     }
 }

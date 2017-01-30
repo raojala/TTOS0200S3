@@ -15,7 +15,7 @@ namespace JAMK.IT
             cards = new List<Card>();
             Card card;
 
-            for (int i = 1; i <= 4; i++)
+            for (int i = 0; i < 4; i++)
             {
                 for (int y = 1; y <= 13; y++)
                 {
