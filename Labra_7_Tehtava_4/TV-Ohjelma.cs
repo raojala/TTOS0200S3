@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace JAMK.IT
 {
+    [Serializable]
+
     class TV_Ohjelma
     {
         /*

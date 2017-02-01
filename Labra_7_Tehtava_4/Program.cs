@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -28,9 +30,9 @@ namespace Labra_7_Tehtava_4
 
             List<TV_Ohjelma> ohjelmat = new List<TV_Ohjelma>();
 
-            LoadFromFile(ohjelmat);
+            ohjelmat = LoadFromFile(ohjelmat);
 
-            foreach(TV_Ohjelma ohj in ohjelmat)
+            foreach (TV_Ohjelma ohj in ohjelmat)
             {
                 Console.WriteLine(ohj.ToString());
             }
@@ -59,40 +61,19 @@ namespace Labra_7_Tehtava_4
         }
 
         // load from file method
-        public static void LoadFromFile (List<TV_Ohjelma> ohj)
+        public static List<TV_Ohjelma> LoadFromFile(List<TV_Ohjelma> ohj)
         {
-            using (StreamReader sr = new StreamReader("output.txt"))
-            {
-                TV_Ohjelma temp;
-                string ss;
-                string[] s;
-                while ((ss = sr.ReadLine()) != null)
-                {
-                    s = ss.Split(';');
-
-                    try
-                    {
-                        temp = new TV_Ohjelma(s[0], (TV_Ohjelma.ChannelNames)Enum.Parse(typeof(TV_Ohjelma.ChannelNames), s[1], true), float.Parse(s[2]), float.Parse(s[3]), s[4]);
-                        ohj.Add(temp);
-                    }
-                    catch (Exception e)
-                    {
-                        throw e;
-                    }
-                }
-            }
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("output.bin", FileMode.OpenOrCreate);
+            ohj = (List < TV_Ohjelma > ) formatter.Deserialize(stream);
+            return ohj;
         }
 
-        // save to file method
-        public static void SaveToFile (List<TV_Ohjelma> ohj)
+        public static void SaveToFile(List<TV_Ohjelma> ohj)
         {
-            using (StreamWriter sw = new StreamWriter("output.txt"))
-            {
-                foreach (TV_Ohjelma ohjelma in ohj)
-                {
-                    sw.WriteLine(ohjelma.ToString());
-                }
-            }
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("output.bin", FileMode.OpenOrCreate);
+            formatter.Serialize(stream, ohj);
         }
     }
 }
