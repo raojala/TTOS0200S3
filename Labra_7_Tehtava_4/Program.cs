@@ -67,7 +67,10 @@ namespace Labra_7_Tehtava_4
             {
                 IFormatter formatter = new BinaryFormatter();
                 Stream stream = new FileStream("output.bin", FileMode.OpenOrCreate);
-                ohj = (List<TV_Ohjelma>)formatter.Deserialize(stream);
+                if (stream.Length > 0)
+                {
+                    ohj = (List<TV_Ohjelma>)formatter.Deserialize(stream);
+                }
                 return ohj;
             }
             catch (Exception e)
