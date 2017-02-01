@@ -63,10 +63,18 @@ namespace Labra_7_Tehtava_4
         // load from file method
         public static List<TV_Ohjelma> LoadFromFile(List<TV_Ohjelma> ohj)
         {
-            IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("output.bin", FileMode.OpenOrCreate);
-            ohj = (List < TV_Ohjelma > ) formatter.Deserialize(stream);
-            return ohj;
+            try
+            {
+                IFormatter formatter = new BinaryFormatter();
+                Stream stream = new FileStream("output.bin", FileMode.OpenOrCreate);
+                ohj = (List<TV_Ohjelma>)formatter.Deserialize(stream);
+                return ohj;
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
         }
 
         public static void SaveToFile(List<TV_Ohjelma> ohj)
