@@ -28,17 +28,15 @@ namespace JAMK.IT
             Käy pääohjelmassa lopuksi läpi Shapes-luokan List-tietorakenne 
             ja tulosta kaikki sen sisältämät kuviot.
             */
-
-            #region callmain
+            
             try
             {
                 paaOhjelma();
             }
             catch (Exception e)
             {
-                throw e;
+                Console.WriteLine(e.Message);
             }
-            #endregion
         }
 
         static void paaOhjelma ()
@@ -47,11 +45,22 @@ namespace JAMK.IT
             {
                 Shapes shapes = new IT.Shapes();
 
-                shapes.ShapeList.Add(new Rectangle(2, 5, "Pallo1"));
-                shapes.ShapeList.Add(new Rectangle(3, 6, "Pallo2"));
-                shapes.ShapeList.Add(new Rectangle(4, 7, "Pallo3"));
-                shapes.ShapeList.Add(new Rectangle(5, 8, "Pallo4"));
-                shapes.ShapeList.Add(new Rectangle(6, 9, "Pallo5"));
+                shapes.ShapeList.Add(new Rectangle(2, 5, "Nelio 1"));
+                shapes.ShapeList.Add(new Rectangle(3, 6, "Nelio 2"));
+                shapes.ShapeList.Add(new Rectangle(4, 7, "Nelio 3"));
+                shapes.ShapeList.Add(new Rectangle(5, 8, "Nelio 4"));
+                shapes.ShapeList.Add(new Rectangle(6, 9, "Nelio 5"));
+
+                shapes.ShapeList.Add(new Circle(1, "Pallo 1"));
+                shapes.ShapeList.Add(new Circle(2, "Pallo 2"));
+                shapes.ShapeList.Add(new Circle(3, "Pallo 3"));
+                shapes.ShapeList.Add(new Circle(4, "Pallo 4"));
+                shapes.ShapeList.Add(new Circle(5, "Pallo 5"));
+
+                foreach (Shape s in shapes.ShapeList)
+                {
+                    Console.WriteLine(s.ToString());
+                }
             }
             catch (Exception e)
             {

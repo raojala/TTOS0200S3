@@ -8,12 +8,14 @@ namespace JAMK.IT
 {
     abstract class Shape
     {
-        string Nimi { get; set; }
+        virtual public string Nimi { get; set; }
+        virtual public float PintaAla { get; }
+        virtual public float Piiri { get; }
 
         virtual public void Pintaala()
         {
         }
-        virtual public void Piiri()
+        virtual public void LaskePiiri()
         {
         }
     }

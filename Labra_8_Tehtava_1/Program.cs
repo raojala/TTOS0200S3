@@ -27,7 +27,7 @@ namespace JAMK.IT
             catch (Exception e)
             {
 
-                throw e;
+                Console.WriteLine(e.Message);
             }
         }
 

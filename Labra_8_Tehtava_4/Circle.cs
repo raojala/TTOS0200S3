@@ -8,27 +8,36 @@ namespace JAMK.IT
 {
     class Circle : Shape
     {
-        public string Nimi { get; set; }
+        public override string Nimi { get; set; }
+        public override float PintaAla { get; }
+        public override float Piiri { get; }
 
         public Circle (int radius, string name)
         {
             Nimi = name;
+            PintaAla = Pintaala(radius);
+            Piiri = LaskePiiri(radius);
         }
 
-        public override void Pintaala()
+        public float Pintaala(float r)
+        {
+            /*
+            pi r*2 pinta-ala
+            */
+            return (float)(Math.PI * Math.Pow(r, 2));
+
+        }
+        public float LaskePiiri(float r)
         {
             /*
             2 pi r keehä
-            pi r*2 pinta-ala
             */
-
-
-
-
+            return (float)(2*Math.PI*r);
         }
-        public override void Piiri()
+
+        public override string ToString()
         {
-            throw new NotImplementedException();
+            return Nimi + ":n " + "Pinta-ala: " + PintaAla + ", Piiri: " + Piiri;
         }
     }
 }
