@@ -41,9 +41,16 @@ namespace JAMK.IT
         }
         static void paaOhjelma ()
         {
+            Lasku lasku = new Lasku();
             try
             {
+                lasku.Tuotteet.Add(new Product("Maito", 0.75f), 3);
+                lasku.Tuotteet.Add(new Product("Piimä", 0.90f), 2);
+                lasku.Tuotteet.Add(new Product("Kahvi", 3.95f), 1);
+                lasku.Tuotteet.Add(new Product("Saarioisten jauhelija pizza", 1.20f), 4);
 
+                lasku.Ready();
+                Console.WriteLine(lasku.ToString());
             }
             catch (Exception e)
             {
